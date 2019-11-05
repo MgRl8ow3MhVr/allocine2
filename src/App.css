@@ -1,22 +1,90 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f2f2f2;
 }
 
-.App-logo {
-  height: 40vmin;
+/* - - - - - - - - - -Header - - - - - - - - */
+
+header {
+  background-color: #fecc01;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header img {
+  height: 40%;
+}
+
+/* - - - - - - - - - -Hero - - - - - - - - */
+
+.hero {
+  height: 40vh;
+  border-style: solid;
+  border-width: 1px;
+  position: relative;
+  /* background-color: tomato; */
+}
+
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.hero span {
+  color: white;
+  position: absolute;
+  font-size: 2rem;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat";
+  font-weight: 600;
+  text-shadow: 1px 1px 1px black;
+  z-index: 100;
+}
+
+/* - - - - - - - - - -Details - - - - - - - - */
+
+.details {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 25px;
+  margin: 40px;
+  background-color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.details div {
+  display: flex;
+}
+
+.details div picture {
+  height: 350px;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.details div picture img {
+  /* height: 100%; */
+  width: 100%;
+  object-fit: cover;
+}
+
+.details div nav {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+/* - - - - - - - - - -TexteLine - - - - - - - - */
+.textline span:nth-child(1) {
+  color: grey;
+  margin-right: 10px;
+  margin: 10px;
+}
+.textline span:nth-child(2) {
+  color: blue;
+  margin: 10px;
 }
