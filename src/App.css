@@ -16,7 +16,7 @@ header img {
   height: 40%;
 }
 
-/* - - - - - - - - - -Hero - - - - - - - - */
+/* # # # # # # # # # # # # # # HERO # # # # # # # # # # # # */
 
 .hero {
   height: 40vh;
@@ -46,45 +46,83 @@ header img {
   z-index: 100;
 }
 
-/* - - - - - - - - - -Details - - - - - - - - */
+/* # # # # # # # # # # # # # # MENU # # # # # # # # # # # # */
 
+.menu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  /* padding-left: 300px; */
+  /* padding-right: 300px; */
+  font-weight: bold;
+  overflow: scroll;
+}
+.menu * {
+  flex: 0 0 auto;
+}
+.menu li {
+  cursor: pointer;
+}
+
+.menu div {
+  transform: scale(0.8);
+  display: flex;
+  align-items: center;
+}
+.menu div:hover {
+  cursor: pointer;
+}
+
+/* # # # # # # # # # # # # # # Page de Resultats # # # # # # # # # # # # */
+
+.moviespage {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* On contraint hauteur et largeur dans le conteneur */
 .details {
+  width: calc(50% - 10px);
+  /* width: 45%; */
+  height: 200px;
   display: flex;
-  flex-direction: column;
-  padding: 25px;
-  margin: 40px;
+  margin: 4px;
   background-color: white;
+  box-shadow: 2px 2px #888888;
 }
 
-.details div {
-  display: flex;
-}
-
-.details div picture {
-  height: 350px;
-  width: 200px;
+/* //contrainte de la largeur de la photo. La nav prendra le reste de la largeur */
+.details picture {
+  flex: 0 0 auto;
+  height: 100%;
+  width: 135px;
   margin-right: 20px;
 }
 
-.details div picture img {
-  /* height: 100%; */
+.details picture img {
+  height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.details div nav {
+/* scroll en cas de depassement de la hauteur contrainte par la boite detail */
+.details nav {
   display: flex;
+  /* overflow: scroll; */
+  /* text-overflow: ellipsis; */
   flex-direction: column;
-  padding-top: 20px;
+  /* padding-top: 20px; */
+  font-size: 0.6rem;
+
+  margin: 10px;
 }
 
-/* - - - - - - - - - -TexteLine - - - - - - - - */
-.textline span:nth-child(1) {
-  color: grey;
-  margin-right: 10px;
-  margin: 10px;
+.details nav span:nth-child(1) {
+  font-weight: bold;
+  font-size: 0.8rem;
 }
-.textline span:nth-child(2) {
-  color: blue;
-  margin: 10px;
+.details nav span:nth-child(2) {
+  color: grey;
+  font-size: 0.7rem;
 }
