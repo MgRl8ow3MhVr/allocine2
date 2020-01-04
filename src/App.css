@@ -1,6 +1,15 @@
 body {
   background-color: #f2f2f2;
 }
+li {
+  list-style-type: none;
+  text-decoration: underline;
+  margin: 5px 10px 5px 10px;
+}
+
+/* - - - - - - - - - -Loading - - - - - - - - */
+.loading {
+}
 
 /* - - - - - - - - - -Header - - - - - - - - */
 
@@ -52,9 +61,7 @@ header img {
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: flex-start;
-  /* padding-left: 300px; */
-  /* padding-right: 300px; */
+  justify-content: center;
   font-weight: bold;
   overflow: scroll;
 }
@@ -79,17 +86,19 @@ header img {
 .moviespage {
   display: flex;
   flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
 }
 
 /* On contraint hauteur et largeur dans le conteneur */
 .details {
-  width: calc(50% - 10px);
-  /* width: 45%; */
+  width: calc(50% - 20px);
   height: 200px;
   display: flex;
-  margin: 4px;
+  margin: 6px;
   background-color: white;
   box-shadow: 2px 2px #888888;
+  overflow: hidden;
 }
 
 /* //contrainte de la largeur de la photo. La nav prendra le reste de la largeur */

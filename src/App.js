@@ -54,7 +54,7 @@ const App = () => {
       />
 
       {!isReady ? (
-        <p>loading</p>
+        <p className="loading">loading</p>
       ) : (
         <ul className="moviespage">
           {movies.map((aMovie, index) => {
