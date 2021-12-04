@@ -17,10 +17,10 @@ const App = () => {
   const urlsAPI = [
     "https://api-allocine.herokuapp.com/api/movies/popular",
     "https://api-allocine.herokuapp.com/api/movies/upcoming",
-    "https://api-allocine.herokuapp.com/api/movies/top_rated"
+    "https://api-allocine.herokuapp.com/api/movies/top_rated",
   ];
 
-  const fetchData = async moviesAPI => {
+  const fetchData = async (moviesAPI) => {
     console.log(urlsAPI[moviesAPI[0]] + "?p=" + moviesAPI[1]);
     const response = await axios.get(
       urlsAPI[moviesAPI[0]] + "?p=" + moviesAPI[1]
@@ -34,17 +34,19 @@ const App = () => {
     fetchData(moviesAPI);
   }, [moviesAPI]);
 
+  console.log("ADD HERE");
+
   return (
     <div className="App">
       <Header />
       <Menu
-        changeList={num => {
+        changeList={(num) => {
           return () => {
             setMoviesAPI([num, 1]);
             setIsReady(false);
           };
         }}
-        pageplus={num => {
+        pageplus={(num) => {
           return () => {
             setMoviesAPI([moviesAPI[0], moviesAPI[1] + num]);
             setIsReady(false);
