@@ -133,3 +133,39 @@ header img {
   color: grey;
   font-size: 0.7rem;
 }
+
+.modale {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.modale img {
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+}
+
+.titlemodale {
+  font-size: 50px;
+  color: white;
+}
+.modale span {
+  font-size: 20px;
+  color: white;
+}
+
+.seances {
+  background-color: bisque;
+  font-size: 40px;
+  cursor: pointer;
+  margin: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}

@@ -13,7 +13,7 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [moviesAPI, setMoviesAPI] = useState([0, 1]);
   const [isReady, setIsReady] = useState(false);
-
+  const [modale, setModale] = useState(null);
   const urlsAPI = [
     "https://api-allocine.herokuapp.com/api/movies/popular",
     "https://api-allocine.herokuapp.com/api/movies/upcoming",
@@ -60,17 +60,37 @@ const App = () => {
       ) : (
         <ul className="moviespage">
           {movies.map((aMovie, index) => {
+            console.log(aMovie);
             return (
               <Details
                 key={index}
+                index={index}
                 original_title={aMovie.original_title}
                 release_date={aMovie.release_date}
                 overview={aMovie.overview}
                 poster={imgsUrl + aMovie.poster_path}
+                setModale={setModale}
               ></Details>
             );
           })}
         </ul>
+      )}
+
+      {modale !== null && (
+        <div
+          className="modale"
+          onClick={() => {
+            setModale(null);
+          }}
+        >
+          <div className="titlemodale">{movies[modale].original_title}</div>
+          <span>Langage : {movies[modale].original_language}</span>
+          <span>Moyenne des votes : {movies[modale].vote_average}</span>
+          <img src={imgsUrl + movies[modale].backdrop_path} />
+          <div className="seances">
+            Voir les séances disponibles autour de moi
+          </div>
+        </div>
       )}
     </div>
   );
